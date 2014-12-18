@@ -1,0 +1,5 @@
+# Configuration
+username = 'yourusername'    # username at mail provider
+password = 'yourpass'        # mail provider pass
+me = "example@example.com"   # your mail (sender)
+you = "example@example.com"  # your mail (receiver)
