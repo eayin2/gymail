@@ -1,0 +1,8 @@
+post_install() {
+    echo "
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+ Configure /etc/gymail.conf before running gymail
+*  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
+"
+}
+
