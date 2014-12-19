@@ -2,6 +2,7 @@
 pkgname="gymail"
 pkgver="0.1"
 pkgrel=1
+url="https://github.com/eayin2/gymail"
 pkgdesc="Simple python mail notification script"
 arch=('x86_64')
 license=('GPL')
