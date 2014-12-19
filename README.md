@@ -18,6 +18,7 @@ optional arguments:
                         Subject of email.
   -m MSG, --msg MSG     Email message goes here.
   ```
+  
   <br>
   #### Example:
   `gymail.py -e info -s Backup -m "Backup was successful"`
