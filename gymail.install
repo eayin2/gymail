@@ -1,7 +1,9 @@
 post_install() {
     echo "
 *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
- Configure /etc/gymail.conf before running gymail
+ Create and configure /etc/gymail.conf before running gymail.
+ See: https://github.com/eayin2/gymail for an example gymail.conf
+ file.
 *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *
 "
 }

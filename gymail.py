@@ -5,14 +5,19 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
+import sys
 
 # Reading the configuration from config.conf
-conf_path = os.path.dirname(os.path.realpath(__file__))
+conf_path = "/etc/gymail.conf"
 conf = {}
-with open(conf_path + "/config.conf") as f:
-    code = compile(f.read(), conf_path + "/config.conf", 'exec')
-    exec(code, conf)
-
+try:
+    with open(conf_path) as f:
+        code = compile(f.read(), conf_path, 'exec')
+        exec(code, conf)
+except Exception as err:
+    print(err)
+    print("* * * * * * * * *\n %s is missing.\n" % conf_path)
+    sys.exit(0)
 # Functions
 def send_mail(event, subject, message):
     msg = MIMEMultipart('alternative')

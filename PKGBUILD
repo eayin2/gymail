@@ -18,6 +18,5 @@ pkgver() {
 }
 package() {
     cd "${srcdir}/${pkgname}-${pkgver}"
-    install -Dm755 bin/gymail.py "${pkgdir}"/usr/bin/gymail.py
-    install -Dm644 etc/gymail.conf "${pkgdir}"/etc/gymail.conf
+    install -Dm755 gymail.py "${pkgdir}"/usr/bin/gymail.py
 }
