@@ -4,7 +4,7 @@ gymail
 gymail is a simple python mail notification script.
 <br>
 
-# Usage description
+## Usage description
 
 ``` 
 usage: gymail.py [-h] -e {error,warning,info} -s SUBJECT -m MSG
@@ -19,10 +19,9 @@ optional arguments:
                         Subject of email.
   -m MSG, --msg MSG     Email message goes here.
   ```
-<br>
 
-# Example:
+## Example:
 `gymail.py -e info -s Backup -m "Backup was successful"` <br>
 
-# Configuration:
+## Configuration:
 Add your mail provider data to /etc/gymail.conf 
