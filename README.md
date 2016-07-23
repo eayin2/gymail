@@ -29,5 +29,9 @@ optional arguments:
 `gymail.py -e info -s Backup -m "Backup was successful"` <br>
 
 ## Module usage:
-    from gymail import core
-    core.send_mail(event='info', message='example', subject='example')
+```
+import os
+from gymail.core import send_mail
+send_mail(event="info", message="example", subject="example")
+send_mail(event="info", subject=os.path.basename(__file__), message="Your message here") 
+```
