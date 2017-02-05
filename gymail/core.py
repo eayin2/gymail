@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-import os
-import sys
 import argparse
+import logging
+import os
 import smtplib
+import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from helputils.defaultlog import log
+
+log = logging.getLogger("gymail")
 conf_path = "/etc/gymail.conf"
 conf = {}
-
 try:
     with open(conf_path) as f:
         code = compile(f.read(), conf_path, 'exec')
@@ -35,12 +38,15 @@ def send_mail(event, subject, message, sender=sender, recipient=recipient, usern
     if event == "error":
         html = template.format(error_style, message)
         msg['Subject'] = "error: " + subject
+        log.error("Sending %s mail." % event)
     elif event == "warning":
         html = template.format(warning_style, message)
         msg['Subject'] = "warning: " + subject
+        log.warning("Sending %s mail." % event)
     elif event == "info":
         html = template.format(info_style, message)
         msg['Subject'] = "info: " + subject
+        log.info("Sending %s mail." % event)
     part1 = MIMEText(message, 'plain')
     part2 = MIMEText(html, 'html')
     msg.attach(part1)
