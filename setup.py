@@ -15,5 +15,5 @@ setup(
             'gymail = gymail.core:argparse_entrypoint',
         ],
     },
-    install_requires=[],
+    install_requires=["helputils"],
 )

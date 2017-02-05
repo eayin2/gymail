@@ -6,6 +6,9 @@ gymail is a simple python mail notification script with three eligible event typ
 Use it in cli or as python module.
 <br>
 
+## Requirements:
+`pip3 install helputils`
+
 ## Configuration:
 Add your mail provider data to /etc/gymail.conf 
 
