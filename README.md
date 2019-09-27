@@ -1,19 +1,19 @@
-gymail
-======
-
+# gymail
 gymail is a simple python mail notification script with three eligible event types
-(error, warning and info), for each a different visual style is applied in the html body.
-Use it in cli or as python module.
-<br>
+(error, warning and info), for each a different visual style is applied in an HTML body.
+Use it as a script or a python module.
 
-## Requirements:
-`pip3 install helputils`
+## Install
+`pip install gymail`
 
 ## Configuration:
-Add your mail provider data to /etc/gymail.conf 
+After running gymail the first time, a config example is created in
+`~/.local/share/gymail/gymail.toml`
 
-## CLI usage
+## CLI
+- Example: `gymail.py -e info -s Backup -m "Backup was successful"`
 
+### Usage
 ``` 
 usage: gymail.py [-h] -e {error,warning,info} -s SUBJECT -m MSG
 
@@ -26,15 +26,12 @@ optional arguments:
   -s SUBJECT, --subject SUBJECT
                         Subject of email.
   -m MSG, --msg MSG     Email message goes here.
-  ```
-
-## CLI example:
-`gymail.py -e info -s Backup -m "Backup was successful"` <br>
+```
 
 ## Module usage:
 ```
-import os
 from gymail.core import send_mail
-send_mail(event="info", message="example", subject="example")
-send_mail(event="info", subject=os.path.basename(__file__), message="Your message here") 
+send_mail(event="error", message="foo", subject="example")
+send_mail(event="info", message="foo", subject="example")
+send_mail(event="warning", message="foo", subject="example")
 ```

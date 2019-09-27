@@ -1,0 +1,8 @@
+# Configuration
+USERNAME = "your_username"
+PASSWORD = "your_pass"
+SENDER = "example_1@example.com"
+RECIPIENT = "example_2@example.com"
+SMTP = "smtp_address:port"
+# If authentication fails, enable 2 factor auth in google account settings and create an app
+# password. then use the password here.
